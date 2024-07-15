@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .card h3 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .drop_box {
+        border: 2px dashed #007bff;
+        border-radius: 10px;
+        padding: 20px;
+        background: #f8f9fa;
+      }
+
+      .drop_box header h4 {
+        margin: 0;
+        font-size: 20px;
+        color: #007bff;
+      }
+
+      .drop_box p {
+        margin: 10px 0;
+        font-size: 14px;
+        color: #666;
+      }
+
+      form p {
+        margin: 15px 0;
+      }
+
+      label {
+        display: block;
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 5px;
+      }
+
+      input[type="file"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .btn {
+        display: inline-block;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h3>Upload Files</h3>
+        <div class="drop_box">
+          <header>
+            <h4>Select File here</h4>
+          </header>
+          <p>Only CSV files are supported</p>
+          
+          <form method="post" enctype="multipart/form-data">
+            <p>
+              <label for="file1">Upload Test Data Here:</label>
+              <input type="file" name="file1" accept=".csv">
+            </p>
+            <p>
+              <label for="file2">Upload Train Data Here:</label>
+              <input type="file" name="file2" accept=".csv">
+            </p>
+            <p>
+              <input type="submit" class="btn" value="Upload">
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

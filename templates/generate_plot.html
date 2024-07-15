@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+        }
+
+        form {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+
+        .loading {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .loading img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Insights</h1>
+        <p>This will take some time... Grab a coffee if you can</p>
+        <form id="insightsForm" method="post">
+            <br>
+            <input type="submit" value="Generate graphs">
+        </form>
+        <div class="loading" id="loading">
+            <p>Generating graphs...</p>
+            <img src="https://media.giphy.com/media/3o7aCUu8cMgnPXOyN6/giphy.gif" alt="Dancing Coffee">
+        </div>
+    </div>
+    <script>
+        document.getElementById('insightsForm').addEventListener('submit', function(event) {
+            document.getElementById('loading').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
+
