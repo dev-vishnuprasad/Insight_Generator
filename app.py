@@ -15,7 +15,8 @@ import base64
 app = Flask(__name__)
 
 # Configure Gemini
-genai.configure(api_key="AIzaSyAUL9bvFucQbB0kJIuPS9RNvrr_CQ-YaY8")
+gemini_key = os.environ["gemini_key"]
+genai.configure(api_key= gemini_key)
 model = genai.GenerativeModel('gemini-1.5-pro')
 
 app.secret_key = 'session_key'  
