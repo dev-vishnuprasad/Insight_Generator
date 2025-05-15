@@ -1,4 +1,4 @@
-# Income Classification Web Application
+# Generate insights with any dataset
 
 ## Overview
 This is a Flask-based web application designed to preprocess datasets, train machine learning models, and generate visualizations and insights for income classification. The application allows users to upload CSV files, preprocess data, train RandomForest and XGBoost models, generate feature importance plots, and derive insights using the Gemini AI model.
